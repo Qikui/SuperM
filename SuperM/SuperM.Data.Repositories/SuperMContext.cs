@@ -11,6 +11,7 @@ namespace SuperM.Data.Repositories
     public class SuperMContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
 
         public SuperMContext() : base() { }
 

@@ -47,6 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201802242041337_AddIsSafe.cs" />
+    <Compile Include="Migrations\201802242041337_AddIsSafe.Designer.cs">
+      <DependentUpon>201802242041337_AddIsSafe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802242103412_CreateInventoryEntity.cs" />
+    <Compile Include="Migrations\201802242103412_CreateInventoryEntity.Designer.cs">
+      <DependentUpon>201802242103412_CreateInventoryEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SuperMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +68,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802242041337_AddIsSafe.resx">
+      <DependentUpon>201802242041337_AddIsSafe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802242103412_CreateInventoryEntity.resx">
+      <DependentUpon>201802242103412_CreateInventoryEntity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

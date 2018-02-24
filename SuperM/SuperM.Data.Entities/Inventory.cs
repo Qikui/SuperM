@@ -8,8 +8,11 @@ namespace SuperM.Data.Entities
 {
     public class Inventory
     {
-        public Product Product { get; set; }
-
+        public int InventoryId { get; set; }
         public int Qty { get; set; }
+        public string Description { get; set; }
+
+        public int? ProductId { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

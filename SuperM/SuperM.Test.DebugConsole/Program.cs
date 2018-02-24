@@ -12,11 +12,12 @@ namespace SuperM.Test.DebugConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Start test the application");
-            ProductService ps = new ProductService();
-            ps.Add(new Data.Entities.Product()
+            InventoryService ps = new InventoryService();
+            ps.Add(new Data.Entities.Inventory()
             {
-                Name = "Apple",
-                Price = 1.23m
+                ProductId = 1,
+                InventoryId = 1000,
+                Qty = 7
             });
 
             Console.WriteLine("test done");

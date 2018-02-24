@@ -14,7 +14,7 @@ namespace SumperM.Business.Services
 
         public ProductService()
         {
-            this._context = new SuperMContext("name=SuperMConnectionString");
+            this._context = new SuperMContext();
         }
 
         public void Add(Product product)
@@ -54,7 +54,7 @@ namespace SumperM.Business.Services
             return product;
         }
 
-        public IList<Product> AllProducts()
+        public List<Product> AllProducts()
         {
             return _context.Products.ToList();
         }
