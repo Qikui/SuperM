@@ -15,6 +15,7 @@ namespace SuperM.UI.WinForm
     public partial class Form1 : Form
     {
         private ProductService productService;
+        private Product product { get; set; }
 
         public Form1()
         {
@@ -43,10 +44,11 @@ namespace SuperM.UI.WinForm
                 Description = description,
                 Category = category
             };
-
-            productService.Add(product);
+            int? id = this.product.ProductId;
+            if (id == null) { productService.Add(product); }
+            else { MessageBox.Show("Error","You can't add modified product!"); }
             ClearInput();
-
+            
         }
 
         private void ClearInput()
@@ -55,6 +57,31 @@ namespace SuperM.UI.WinForm
             this.textBox2.Clear();
             this.textBox3.Clear();
             this.textBox4.Clear();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            product = (Product)dataGridView1.CurrentRow.DataBoundItem;
+            ClearInput();
+            textBox1.Text = product.Name;
+            textBox2.Text = product.Price.ToString();
+            textBox3.Text = product.Description;
+            textBox4.Text = product.Category;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            this.product.Name = (string)textBox1.Text;
+            this.product.Price = decimal.Parse(textBox2.Text);
+            this.product.Description = (string)textBox3.Text;
+            this.product.Category = (string)textBox4.Text;
+
+            if(this.product.ProductId > 0)
+            {
+                productService.Edit(product);
+            }
+            this.product = null;
+            ClearInput();
         }
     }
 }
