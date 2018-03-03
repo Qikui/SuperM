@@ -31,9 +31,10 @@ namespace SuperM.UI.WinForm
 
         private void RefreshDataBinding()
         {
-            this.productsTableAdapter.Fill(this.products._Products);
-            dataGridView1.DataSource = productService.AllProducts();
+            dataGridView1.DataSource = productService.AllProducts().ToList();
+            dataGridView1.Refresh();
         }
+
 
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +81,8 @@ namespace SuperM.UI.WinForm
             this.product.Price = decimal.Parse(textBox2.Text);
             this.product.Description = (string)textBox3.Text;
             this.product.Category = (string)textBox4.Text;
+
+
 
             if(this.product.ProductId > 0)
             {
