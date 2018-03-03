@@ -18,6 +18,11 @@ namespace SumperM.Business.Services
             _context = new SuperMContext();
         }
 
+        public List<Inventory> AllInventories()
+        {
+            return _context.Inventories.ToList();
+        }
+
         public void Edit(Inventory inventory)
         {
             Inventory inventoryToChange = _context.Inventories.Find(inventory.InventoryId);
@@ -64,6 +69,11 @@ namespace SumperM.Business.Services
         {
             List<Inventory> inventoryList = _context.Inventories.SkipWhile(s => s.Qty >= threshold).ToList();
             return inventoryList;
+        }
+
+        public Inventory GetInventory(Product product)
+        {
+            return _context.Inventories.Find(product.ProductId);
         }
     }
 }
