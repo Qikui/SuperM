@@ -29,8 +29,8 @@ namespace SumperM.Business.Services
 
             inventoryToChange.Qty = inventory.Qty;
             inventoryToChange.Description = inventory.Description ?? inventoryToChange.Description;
-            inventoryToChange.ProductId = inventory.ProductId ?? inventoryToChange.ProductId;
-            inventoryToChange.Product = inventory.Product ?? inventoryToChange.Product;
+            //inventoryToChange.ProductId = inventory.ProductId ?? inventoryToChange.ProductId;
+            //inventoryToChange.Product = inventory.Product ?? inventoryToChange.Product;
 
             _context.SaveChanges();
         }
