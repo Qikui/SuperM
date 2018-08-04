@@ -55,6 +55,18 @@
     <Compile Include="Migrations\201802242103412_CreateInventoryEntity.Designer.cs">
       <DependentUpon>201802242103412_CreateInventoryEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803032059579_ShoppingCartAndReceiptCreated.cs" />
+    <Compile Include="Migrations\201803032059579_ShoppingCartAndReceiptCreated.Designer.cs">
+      <DependentUpon>201803032059579_ShoppingCartAndReceiptCreated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803032123461_AddAttrCreatedInShoopingCart.cs" />
+    <Compile Include="Migrations\201803032123461_AddAttrCreatedInShoopingCart.Designer.cs">
+      <DependentUpon>201803032123461_AddAttrCreatedInShoopingCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803032222325_fixedbuginReceiptItemDetails.cs" />
+    <Compile Include="Migrations\201803032222325_fixedbuginReceiptItemDetails.Designer.cs">
+      <DependentUpon>201803032222325_fixedbuginReceiptItemDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SuperMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +87,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802242103412_CreateInventoryEntity.resx">
       <DependentUpon>201802242103412_CreateInventoryEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032059579_ShoppingCartAndReceiptCreated.resx">
+      <DependentUpon>201803032059579_ShoppingCartAndReceiptCreated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032123461_AddAttrCreatedInShoopingCart.resx">
+      <DependentUpon>201803032123461_AddAttrCreatedInShoopingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803032222325_fixedbuginReceiptItemDetails.resx">
+      <DependentUpon>201803032222325_fixedbuginReceiptItemDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -50,6 +50,7 @@
     <Compile Include="InventoryService.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShoppingService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SuperM.Data.Entities\SuperM.Data.Entities.csproj">
