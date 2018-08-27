@@ -114,7 +114,7 @@ namespace SumperM.Business.Services
                 receipt.Total = total;
                 receipt.TaxRate = 1.15m;
                 _context.SaveChanges();
-                return receipt.ReceiptId;
+                return receipt.ReceiptId;   //
             }
             else{
                 throw new ObjectNotFoundException();
