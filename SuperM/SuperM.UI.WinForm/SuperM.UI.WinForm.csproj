@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD:SuperM/SuperM.UI.WinForm/SuperM.UI.WinForm.csproj
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +65,10 @@
       <DependentUpon>Products.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+=======
+    <Compile Include="InventoryService.cs" />
+    <Compile Include="ProductService.cs" />
+>>>>>>> Code First Migration; Create Inventory Entity, InventoryService:SuperM/SumperM.Business.Services/SumperM.Business.Services.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
